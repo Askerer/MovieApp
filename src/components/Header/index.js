@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTyes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import RMDBLog from '../../images/react-movie-logo.svg';
 
@@ -9,7 +11,9 @@ import { Wrapper,Content,LogoImg,TMDBLogoImg } from './Header.styles';
 const Header = () =>(
     <Wrapper>
         <Content >
-            <LogoImg src={RMDBLog} alt='rmdb-logo' />
+            <Link to='/'>
+                <LogoImg src={RMDBLog} alt='rmdb-log'></LogoImg>
+            </Link>
             <TMDBLogoImg src={TMDBLogo} alt='tmdb-logo' />
         </Content>
     </Wrapper>
